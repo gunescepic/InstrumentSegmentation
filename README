@@ -1,0 +1,15 @@
+The code originally taken from : https://github.com/ternaus/robot-surgery-segmentation
+Further implementations belong to me, 
+I have used their purposed model 'Ternaus-Net 16' which is like U-net 16, you can find it in model.py file.
+The folder does not contain miccai challange 2015 dataset. Which can be found in NTNU server, i took that from there.
+There is a bash script that I wrote for training --------- > train.sh
+You can use this bash script to train and make some changes on parameters accordingly.
+
+Step by step:
+
+First preprocessing the data : prepare_date.py
+Split the data for 4-fold cross validation : prepare_train.val
+Train data : train.sh
+Binary mask generation : generate_masks.py
+Evaluation for binary segmentation: evaluate.py
+
