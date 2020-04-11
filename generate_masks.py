@@ -109,7 +109,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.fold == -1:
-        for fold in [0, 1, 2]:
+        for fold in [0, 1, 2, 3]:
             _, file_names = get_split(fold)
             model = get_model(str(Path(args.model_path).joinpath('model_{fold}.pt'.format(fold=fold))),
                               model_type=args.model_type, problem_type=args.problem_type)

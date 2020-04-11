@@ -3,16 +3,16 @@ import numpy as np
 import cv2
 from torch.utils.data import Dataset
 import prepare_data
-"from albumentations.torch.functional import img_to_tensor"
+from albumentations.torch.functional import img_to_tensor
 
-import torchvision.transforms.functional as F
+# import torchvision.transforms.functional as F
 
 
-def img_to_tensor(im, normalize=None):
-    tensor = torch.from_numpy(np.moveaxis(im / (255. if im.dtype == np.uint8 else 1), -1, 0).astype(np.float32))
-    if normalize is not None:
-        return F.normalize(tensor, **normalize)
-    return tensor
+# def img_to_tensor(im, normalize=None):
+#     tensor = torch.from_numpy(np.moveaxis(im / (255. if im.dtype == np.uint8 else 1), -1, 0).astype(np.float32))
+#     if normalize is not None:
+#         return F.normalize(tensor, **normalize)
+#     return tensor
 
 
 class RoboticsDataset(Dataset):
